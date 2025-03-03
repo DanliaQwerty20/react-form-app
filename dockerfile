@@ -1,18 +1,20 @@
-# Используем официальный образ Node.js из Docker Hub
-FROM node:14-alpine
-
-# Устанавливаем рабочую директорию в контейнере
+# Use the latest LTS version of Node.js
+FROM node:18-alpine
+ 
+# Set the working directory inside the container
 WORKDIR /app
-
-# Копируем файлы package.json и package-lock.json и устанавливаем зависимости
+ 
+# Copy package.json and package-lock.json
 COPY package*.json ./
+ 
+# Install dependencies
 RUN npm install
-
-# Копируем остальные файлы приложения
+ 
+# Copy the rest of your application files
 COPY . .
-
-# Указываем, что контейнер должен прослушивать порт 3000
+ 
+# Expose the port your app runs on
 EXPOSE 3000
-
-# Команда для запуска приложения в режиме разработки
+ 
+# Define the command to run your app
 CMD ["npm", "start"]
