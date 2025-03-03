@@ -1,0 +1,170 @@
+/* Обновленный фон как на сайте СТАНКИН */
+body {
+  margin: 0;
+  font-family: 'Arial, sans-serif';
+  background: linear-gradient(180deg, #f2f2f2 0%, #d9d9d9 100%);
+  color: #333333;
+}
+
+/* Контейнер для таблицы */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Изменено для выравнивания по левому краю */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Убедимся, что padding включен в ширину */
+}
+
+/* Заголовок */
+header.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header.header h1.title {
+  font-size: 2rem;
+  color: #005BB5;
+}
+
+/* Кнопка создания заявки */
+.create-button {
+  background-color: #005BB5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #004080;
+}
+
+/* Таблица */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Добавляем горизонтальную прокрутку, если необходимо */
+  padding-bottom: 20px;
+  box-sizing: border-box; /* Убедимся, что padding включен в ширину */
+}
+
+.application-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.application-table th,
+.application-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.application-table th {
+  background-color: #005BB5;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.application-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.application-table tr:hover {
+  background-color: #ecf0f1;
+}
+
+/* Кнопка статуса */
+.status-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.status-button.approved {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.status-button.pending {
+  background-color: #f39c12;
+  color: white;
+}
+
+.status-button.rejected {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Пагинация */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #005BB5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #004080;
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Футер */
+.footer {
+  background-color: #005BB5;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

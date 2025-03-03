@@ -1,0 +1,201 @@
+.sidebar-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 450px;
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  padding: 32px;
+  overflow-y: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 1px solid #e0e0e0;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+}
+
+.sidebar-container:hover {
+  box-shadow: -6px 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff5733;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #e04128;
+  transform: scale(1.1);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.sidebar-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #005BB5;
+  margin: 0;
+}
+
+.sidebar-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.edit-button,
+.approve-button,
+.download-button {
+  background: linear-gradient(145deg, #005BB5, #004080);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button:hover,
+.approve-button:hover,
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.edit-button:active,
+.approve-button:active,
+.download-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #005BB5;
+  box-shadow: 0 0 8px rgba(0, 91, 181, 0.2);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(145deg, #005BB5, #004080);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stankin-logo {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.stankin-logo img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.stankin-logo img:hover {
+  transform: scale(1.05);
+}
+
+.stankin-logo p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-section,
+.sidebar-header,
+.stankin-logo {
+  animation: fadeIn 0.5s ease-out;
+}

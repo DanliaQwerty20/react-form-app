@@ -1,0 +1,111 @@
+/* src/styles/CreateApplication.css */
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF; /* Белый фон */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #005BB5; /* Синий цвет заголовка */
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #333333; /* Темно-серый текст */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #005BB5; /* Синяя граница */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #F2F2F2; /* Серый фон */
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #004080; /* Темно-синяя граница при фокусе */
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #005BB5; /* Синий цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #004080; /* Темно-синий при наведении */
+}
+
+/* Логотип и ссылка на Станкин */
+.stankin-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stankin-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.stankin-logo p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+
+.advisor-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.advisor-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.advisor-select option {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.advisor-select option:hover {
+  background-color: #f0f0f0;
+}
